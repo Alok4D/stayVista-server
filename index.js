@@ -14,7 +14,7 @@ const port = process.env.PORT || 8000;
 const corsOptions = {
   // origin: "http://localhost:5173",
   origin: [
-    "https://server-ju64oithq-alok-roys-projects.vercel.app", // Removed trailing slash for consistency
+    "https://server-one-fawn.vercel.app", // Removed trailing slash for consistency
     "https://stay-vista-g4yolgsxd-alok-roys-projects.vercel.app", // Removed trailing slash
     "https://stayvista-live-2025-ce330.web.app", // 👈 Add this origin
   ],
