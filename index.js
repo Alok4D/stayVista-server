@@ -234,6 +234,13 @@ async function run() {
       res.send(result);
     });
 
+    // delete user
+    app.delete("/users/:email", verifyToken, verifyAdmin, async (req, res) => {
+      const email = req.params.email;
+      const result = await usersCollection.deleteOne({ email });
+      res.send(result);
+    });
+
     // Get all rooms from db
     app.get("/rooms", async (req, res) => {
       const category = req.query.category;
