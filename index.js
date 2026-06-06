@@ -12,12 +12,12 @@ const port = process.env.PORT || 8000;
 
 // middleware
 const corsOptions = {
-  origin: "http://localhost:5173",
-  // origin: [
-  //   "https://stay-vista-nu.vercel.app", // Removed trailing slash for consistency
-  //   "https://stay-vista-g4yolgsxd-alok-roys-projects.vercel.app", // Removed trailing slash
-  //   "https://stayvista-live-2025-ce330.web.app", // 👈 Add this origin
-  // ],
+  // origin: "http://localhost:5173",
+  origin: [
+    "https://stay-vista-nu.vercel.app", // Removed trailing slash for consistency
+    "https://stay-vista-g4yolgsxd-alok-roys-projects.vercel.app", // Removed trailing slash
+    "https://stayvista-live-2025-ce330.web.app", // 👈 Add this origin
+  ],
   credentials: true,
   optionSuccessStatus: 200,
 };
