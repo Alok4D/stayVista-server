@@ -112,12 +112,11 @@ async function run() {
       next();
     };
 
-    // verify host middleware
     const verifyHost = async (req, res, next) => {
       const user = req.user;
       const query = { email: user?.email };
       const result = await usersCollection.findOne(query);
-      if (result?.role !== "host") {
+      if (result?.role !== "host" && result?.role !== "admin") {
         return res.status(401).send({ message: "unauthorized access!" });
       }
       next();
